@@ -3,214 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Жоба парақшасы</title>
+    <title>Әдебиет жобасы</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-        
-        :root {
-            --primary-color: #0078aa;
-            --secondary-color: #00a2c8;
-            --accent-color: #f5a623;
-            --dark-color: #2c3e50;
-            --light-color: #ecf0f1;
-            --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            --border-radius: 12px;
-        }
-        
+        /* Негізгі стильдер */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: var(--light-color);
-            color: var(--dark-color);
-            line-height: 1.7;
-            overflow-x: hidden;
+            background-color: #f8f5e4;
+            color: #3a3a3a;
+            line-height: 1.6;
         }
         
         .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
         
         header {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-            z-index: 0;
-            animation: animatePattern 60s linear infinite;
-        }
-        
-        @keyframes animatePattern {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 1;
+            background-color: #4a3b2c;
+            color: #f8f5e4;
+            padding: 20px 0;
             text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            letter-spacing: 1px;
-            animation: fadeIn 1s ease-in-out;
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+            color: #4a3b2c;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
+        header h1 {
+            color: #f8f5e4;
+            font-size: 2.5rem;
         }
         
         section {
-            padding: 5rem 0;
-            position: relative;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #8d7356;
         }
         
-        section:nth-child(even) {
-            background-color: white;
-        }
-        
-        section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-            padding-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--accent-color);
-            border-radius: 2px;
-        }
-        
-        .authors {
+        /* Жетекшілер секциясы */
+        .leaders {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 3rem;
+            justify-content: space-around;
+            gap: 20px;
         }
         
-        .author-card {
-            background: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            width: 320px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            position: relative;
+        .person {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            transition: transform 0.3s;
         }
         
-        .author-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        .person:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
-        .author-image {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .author-image img {
-            width: 100%;
-            height: 100%;
+        .person img {
+            width: 150px;
+            height: 150px;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 5px solid #e2d8c0;
         }
         
-        .author-card:hover .author-image img {
-            transform: scale(1.05);
-        }
-        
-        .author-info {
-            padding: 1.5rem;
+        /* Тақырып секциясы */
+        .topic {
             text-align: center;
         }
         
-        .author-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--dark-color);
-        }
-        
-        .author-info p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        .about-project {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .about-project p {
-            margin-bottom: 1.5rem;
+        .topic p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            margin-bottom: 20px;
+            text-align: justify;
         }
         
-        .video-section {
-            background: var(--dark-color);
-            color: white;
-            padding: 5rem 0;
-        }
-        
-        .video-section h2 {
-            color: white;
-        }
-        
+        /* Видео секциясы */
         .video-container {
             position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 соотношение сторон */
-            height: 0;
-            margin: 2rem auto;
-            max-width: 900px;
-            box-shadow: var(--shadow);
-            border-radius: var(--border-radius);
             overflow: hidden;
+            padding-top: 56.25%;
+            margin: 0 auto;
+            max-width: 800px;
         }
         
         .video-container iframe {
@@ -222,455 +116,327 @@
             border: none;
         }
         
-        .about-school {
-            text-align: center;
-            background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%230078aa' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .about-school .container {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 3rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-        
-        .about-school p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .slideshow-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #e0f7fa, #fff);
-        }
-        
-        .slideshow-container {
-            max-width: 1000px;
+        /* Слайдшоу секциясы */
+        .slideshow {
             position: relative;
-            margin: auto;
-            box-shadow: var(--shadow);
-            border-radius: var(--border-radius);
+            max-width: 800px;
+            margin: 0 auto;
             overflow: hidden;
+            height: 400px;
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
         }
         
         .slide {
-            display: none;
+            min-width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            background: white;
+            padding: 20px;
         }
         
         .slide img {
-            width: 100%;
-            height: auto;
-            max-height: 600px;
-            object-fit: cover;
+            max-width: 80%;
+            max-height: 300px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         
-        .slide p {
-            padding: 1.5rem;
-            font-size: 1.1rem;
-            color: var(--dark-color);
+        .slide h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
         }
         
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: 60px;
-            height: 60px;
-            margin-top: -30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.5rem;
-            transition: 0.3s ease;
-            border-radius: 50%;
-            user-select: none;
-            background-color: rgba(0, 120, 170, 0.7);
-            z-index: 2;
-        }
-        
-        .prev {
-            left: 20px;
-        }
-        
-        .next {
-            right: 20px;
-        }
-        
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 120, 170, 0.9);
-            transform: scale(1.05);
-        }
-        
-        .dots {
+        .navigation {
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 15px;
         }
         
-        .dot {
-            cursor: pointer;
-            height: 12px;
-            width: 12px;
+        .navigation button {
+            background-color: #8d7356;
+            color: white;
+            border: none;
+            padding: 8px 15px;
             margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
         
-        .active, .dot:hover {
-            background-color: var(--primary-color);
-            transform: scale(1.2);
+        .navigation button:hover {
+            background-color: #6a563f;
         }
         
-        .fade {
-            animation-name: fade;
-            animation-duration: 1s;
-        }
-        
-        @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-        }
-        
+        /* Футер */
         footer {
-            background: var(--dark-color);
-            color: white;
+            background-color: #4a3b2c;
+            color: #f8f5e4;
+            padding: 20px 0;
             text-align: center;
-            padding: 3rem 0;
+            margin-top: 30px;
         }
         
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: var(--accent-color);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            opacity: 0.7;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-        }
-        
-        /* Адаптивность */
-        @media screen and (max-width: 1024px) {
-            h1 {
-                font-size: 2.5rem;
+        /* Мобильді нұсқа үшін медиа сұраныстар */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
             }
             
-            section h2 {
-                font-size: 2.2rem;
-            }
-        }
-        
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            section {
-                padding: 4rem 0;
-            }
-            
-            section h2 {
-                font-size: 2rem;
-                margin-bottom: 2rem;
-            }
-            
-            .authors {
-                gap: 2rem;
-            }
-            
-            .prev, .next {
-                width: 50px;
-                height: 50px;
-                margin-top: -25px;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            h1 {
+            header h1 {
                 font-size: 1.8rem;
             }
             
-            header p {
-                font-size: 1rem;
-            }
-            
             section {
-                padding: 3rem 0;
+                padding: 20px;
             }
             
-            section h2 {
-                font-size: 1.7rem;
-                margin-bottom: 1.5rem;
+            .leaders {
+                flex-direction: column;
             }
             
-            .author-card {
-                width: 100%;
+            .person {
+                margin-bottom: 20px;
             }
             
-            .prev, .next {
-                width: 40px;
-                height: 40px;
-                margin-top: -20px;
-                font-size: 1.2rem;
+            .slideshow {
+                height: 300px;
             }
             
-            .about-school .container {
-                padding: 1.5rem;
+            .slide {
+                height: 300px;
             }
         }
-        
-        /* Элементы украшения */
-        .decorative-circle {
-            position: absolute;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            opacity: 0.1;
-            z-index: 0;
+
+            /* Қосымша видеолар секциясы үшін стильдер */
+    .additional-videos {
+        margin-top: 30px;
+    }
+    
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .video-item {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    
+    .video-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .video-thumbnail {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 арақатынасы */
+        overflow: hidden;
+    }
+    
+    .video-thumbnail iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
+    .video-item h4 {
+        padding: 10px;
+        text-align: center;
+        font-size: 1rem;
+        margin: 0;
+        color: #4a3b2c;
+    }
+    
+    /* Мобильді нұсқа үшін медиа сұраныстар */
+    @media (max-width: 768px) {
+        .video-grid {
+            grid-template-columns: 1fr;
         }
-        
-        .circle-1 {
-            width: 300px;
-            height: 300px;
-            top: -100px;
-            left: -150px;
-        }
-        
-        .circle-2 {
-            width: 200px;
-            height: 200px;
-            bottom: -50px;
-            right: -100px;
-        }
+    }
     </style>
 </head>
 <body>
+    <!-- Басы -->
     <header>
-        <div class="header-content container">
-            <h1>Жоба атауы</h1>
-            <p>Жоба туралы қысқаша сипаттама - білім мен ғылымның жаңа көкжиектері</p>
+        <div class="container">
+            <h1>Әдебиет әлеміне саяхат</h1>
         </div>
     </header>
     
-    <section id="authors">
-        <div class="container">
-            <h2>Авторлар мен жетекшілер</h2>
-            <div class="authors">
-                <div class="author-card">
-                    <div class="author-image">
-                        <img src="/api/placeholder/600/400" alt="Автор фотосы">
-                    </div>
-                    <div class="author-info">
-                        <h3>Автор аты-жөні</h3>
-                        <p>Автор туралы қысқаша ақпарат. Мамандығы, тәжірибесі және жетістіктері туралы мәліметтер.</p>
-                    </div>
+    <div class="container">
+        <!-- Автор және жетекші секциясы -->
+        <section>
+            <h2>Автор және жетекші</h2>
+            <div class="leaders">
+                <div class="person">
+                    <img src="/api/placeholder/400/400" alt="Автор">
+                    <h3>Асқар Ахметов</h3>
+                    <p>Жоба авторы</p>
+                    <p>11 "А" сынып оқушысы</p>
                 </div>
-                
-                <div class="author-card">
-                    <div class="author-image">
-                        <img src="/api/placeholder/600/400" alt="Жетекші фотосы">
-                    </div>
-                    <div class="author-info">
-                        <h3>Жетекші аты-жөні</h3>
-                        <p>Жетекші туралы қысқаша ақпарат. Ғылыми дәрежесі, тәжірибесі және білім беру саласындағы жетістіктері.</p>
-                    </div>
+                <div class="person">
+                    <img src="/api/placeholder/400/400" alt="Жетекші">
+                    <h3>Әсел Тұрарқызы</h3>
+                    <p>Жоба жетекшісі</p>
+                    <p>Қазақ тілі мен әдебиеті пәнінің мұғалімі</p>
                 </div>
             </div>
-        </div>
-        <div class="decorative-circle circle-1"></div>
-    </section>
-    
-    <section id="about-project">
-        <div class="container">
-            <h2>Жұмыс тақырыбы туралы</h2>
-            <div class="about-project">
-                <p>Біздің жоба тақырыбы өте маңызды мәселелерді қарастырады. Бұл тақырып бойынша терең зерттеулер жүргізілді және қызықты нәтижелер алынды.</p>
-                <p>Жұмыстың мақсаты мен міндеттері туралы толығырақ ақпарат мұнда келтірілген. Біз зерттеулерді бірнеше ай бойы жүргіздік және қазіргі заманғы әдістемелерді қолдандық.</p>
-                <p>Зерттеу барысында әртүрлі әдістер қолданылды және нәтижесінде бірқатар маңызды қорытындылар жасалды. Бұл жаңалықтар білім беру саласында үлкен өзгерістер әкелуі мүмкін.</p>
-                <p>Жобаның практикалық қолданысы өте кең және ол болашақта көптеген салаларда қолданылуы мүмкін.</p>
-            </div>
-        </div>
-        <div class="decorative-circle circle-2"></div>
-    </section>
-    
-    <section id="video" class="video-section">
-        <div class="container">
-            <h2>Видео</h2>
+        </section>
+        
+        <!-- Жоба тақырыбы -->
+        <section class="topic">
+            <h2>Жоба тақырыбы: Қазақ әдебиетіндегі фольклор элементтері</h2>
+            <p>Бұл жоба қазақ әдебиетіндегі фольклор элементтерінің рөлі мен маңызын зерттеуге арналған. Зерттеу барысында қазақ фольклорының негізгі жанрлары, олардың заманауи әдебиетке әсері және мәдени мұраны сақтаудағы рөлі қарастырылды.</p>
+            <p>Жұмыста қазақ халық ауыз әдебиетінің үлгілерін талдау, оның қазіргі заманғы шығармаларда қолданылу ерекшеліктерін анықтау және ұлттық бірегейлікті сақтаудағы маңызын түсіндіру міндеттері қойылды.</p>
+            <p>Зерттеу жұмысының негізгі бөлігінде аңыздар, ертегілер, батырлар жыры, айтыс, мақал-мәтелдер сияқты фольклор жанрларының қазіргі әдебиеттегі көрінісі талданады.</p>
+        </section>
+        
+        <!-- Мектеп туралы видео -->
+        <section>
+            <h2>Біздің мектеп туралы</h2>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Мектеп туралы видео" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Жаңа YouTube видео секциясын қосу -->
+<section>
+    <h2>Қазақ фольклоры туралы видеолар</h2>
+    <p>Қазақ халқының ауыз әдебиеті мен фольклоры туралы пайдалы видеоларды төменде көре аласыз.</p>
+    
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/ВИДЕО_ID" title="Қазақ фольклоры туралы видео" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Қосымша видеолар секциясы -->
+    <div class="additional-videos">
+        <h3>Тағы да көруге болады</h3>
+        <div class="video-grid">
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/ВИДЕО_ID_1" title="Қазақ фольклоры видео 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h4>Қазақ аңыздары</h4>
+            </div>
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/ВИДЕО_ID_2" title="Қазақ фольклоры видео 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h4>Қазақ ертегілері</h4>
+            </div>
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <iframe src="https://www.youtube.com/embed/ВИДЕО_ID_3" title="Қазақ фольклоры видео 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h4>Батырлар жыры</h4>
             </div>
         </div>
-    </section>
-    
-    <section id="about-school" class="about-school">
-        <div class="container">
-            <h2>Мектеп туралы</h2>
-            <p>Біздің мектеп - озық білім мен тәрбие беретін орта. Мұнда оқушылар жан-жақты дамиды және өмірге дайындалады. Мектеп оқушыларға жоғары сапалы білім беріп қана қоймай, сонымен қатар оларды болашақ өмірге дайындайды.</p>
-            <p>Мектептің тарихы мен жетістіктері туралы толығырақ ақпарат. Біздің мектеп көптеген республикалық және халықаралық жарыстарда жүлделі орындарға ие болды. Оқушылардың жетістіктері бізді мақтан етеді.</p>
-            <p>Мектеп қоғамдағы белсенді орын алады және әртүрлі қайырымдылық шараларына қатысады. Біз тек білім беруді ғана емес, сондай-ақ оқушылардың азаматтық ұстанымын қалыптастыруды мақсат етеміз.</p>
-        </div>
-    </section>
-    
-    <section id="slideshow" class="slideshow-section">
-        <div class="container">
-            <h2>Слайдшоу</h2>
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="/api/placeholder/1000/600" alt="Сурет 1">
-                    <p>Сурет 1 сипаттамасы - жобаның маңызды сәттері</p>
+    </div>
+</section>
+        
+        <!-- Слайдшоу -->
+        <section>
+            <h2>Қазақ әдебиетінің жауһарлары</h2>
+            <div class="slideshow">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="/api/placeholder/500/300" alt="Абай Құнанбаев">
+                        <h3>Абай Құнанбаев</h3>
+                        <p>Ұлы ақын, ойшыл, қазақ жазба әдебиетінің негізін қалаушы</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/api/placeholder/500/300" alt="Мұхтар Әуезов">
+                        <h3>Мұхтар Әуезов</h3>
+                        <p>Жазушы, драматург, "Абай жолы" эпопеясының авторы</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/api/placeholder/500/300" alt="Жамбыл Жабаев">
+                        <h3>Жамбыл Жабаев</h3>
+                        <p>Халық ақыны, жырау, айтыс өнерінің шебері</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/api/placeholder/500/300" alt="Бауыржан Момышұлы">
+                        <h3>Бауыржан Момышұлы</h3>
+                        <p>Жазушы, қолбасшы, "Ұшқан ұя" шығармасының авторы</p>
+                    </div>
+                    <div class="slide">
+                        <img src="/api/placeholder/500/300" alt="Олжас Сүлейменов">
+                        <h3>Олжас Сүлейменов</h3>
+                        <p>Ақын, жазушы, қоғам қайраткері</p>
+                    </div>
                 </div>
-                
-                <div class="slide fade">
-                    <img src="/api/placeholder/1000/600" alt="Сурет 2">
-                    <p>Сурет 2 сипаттамасы - жоба командасының жұмыс істеу процесі</p>
+                <div class="navigation">
+                    <button id="prev">Алдыңғы</button>
+                    <button id="next">Келесі</button>
                 </div>
-                
-                <div class="slide fade">
-                    <img src="/api/placeholder/1000/600" alt="Сурет 3">
-                    <p>Сурет 3 сипаттамасы - жобаның нәтижелерін презентациялау</p>
-                </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
     
+    <!-- Футер -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Жоба атауы</div>
-                <p>Жоба туралы қосымша ақпарат алу үшін бізбен байланысыңыз</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg>
-                    </a>
-                    <a href="#" aria-label="Twitter">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753C20.18 7.773 21.692 5.25 22 4.009z"></path></svg>
-                    </a>
-                    <a href="#" aria-label="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    </a>
-                </div>
-                <p class="copyright">&copy; 2025 Барлық құқықтар қорғалған</p>
-            </div>
+            <p>© 2025 Әдебиет жобасы. Барлық құқықтар қорғалған.</p>
         </div>
     </footer>
     
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            let dots = document.getElementsByClassName("dot");
-            
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-            
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
-        
-        // Автоматическое переключение слайдов каждые 5 секунд
-        setInterval(function() {
-            plusSlides(1);
-        }, 5000);
-        
-        // Анимация появления элементов при прокрутке
+        // Слайдшоу үшін JavaScript коды
         document.addEventListener('DOMContentLoaded', function() {
-            const animateOnScroll = function() {
-                const elementsToAnimate = document.querySelectorAll('.author-card, .about-project p, .video-container, .about-school .container');
-                
-                elementsToAnimate.forEach(function(element) {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (elementPosition < windowHeight - 100) {
-                        element.style.opacity = '1';
-                        element.style.transform = 'translateY(0)';
-                    }
-                });
-            };
+            const slides = document.querySelector('.slides');
+            const slideItems = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev');
+            const nextBtn = document.getElementById('next');
+            let currentSlide = 0;
+            const slideCount = slideItems.length;
             
-            // Добавляем начальные стили для анимации
-            const elementsToAnimate = document.querySelectorAll('.author-card, .about-project p, .video-container, .about-school .container');
-            elementsToAnimate.forEach(function(element) {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            // Слайдты көрсету функциясы
+            function showSlide(n) {
+                if (n >= slideCount) {
+                    currentSlide = 0;
+                } else if (n < 0) {
+                    currentSlide = slideCount - 1;
+                } else {
+                    currentSlide = n;
+                }
+                
+                slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            
+            // Алдыңғы слайдқа өту
+            prevBtn.addEventListener('click', function() {
+                showSlide(currentSlide - 1);
             });
             
-            // Запускаем анимацию при загрузке и прокрутке
-            window.addEventListener('scroll', animateOnScroll);
-            animateOnScroll
+            // Келесі слайдқа өту
+            nextBtn.addEventListener('click', function() {
+                showSlide(currentSlide + 1);
+            });
+            
+            // Автоматты слайдшоу
+            setInterval(function() {
+                showSlide(currentSlide + 1);
+            }, 5000);
+            
+            // Бастапқы слайдты көрсету
+            showSlide(0);
+        });
+    </script>
+</body>
+</html>
