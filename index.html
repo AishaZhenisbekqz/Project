@@ -325,45 +325,7 @@
     </div>
     
 
-</section>
-        
-        <!-- Слайдшоу -->
-        <section>
-            <h2>Фотогалерия</h2>
-            <div class="slideshow">
-                <div class="slides">
-                    <div class="slide">
-                        <img src="/api/placeholder/500/300" alt="Абай Құнанбаев">
-                        <h3>Абай Құнанбаев</h3>
-                        <p>Ұлы ақын, ойшыл, қазақ жазба әдебиетінің негізін қалаушы</p>
-                    </div>
-                    <div class="slide">
-                        <img src="/api/placeholder/500/300" alt="Мұхтар Әуезов">
-                        <h3>Мұхтар Әуезов</h3>
-                        <p>Жазушы, драматург, "Абай жолы" эпопеясының авторы</p>
-                    </div>
-                    <div class="slide">
-                        <img src="/api/placeholder/500/300" alt="Жамбыл Жабаев">
-                        <h3>Жамбыл Жабаев</h3>
-                        <p>Халық ақыны, жырау, айтыс өнерінің шебері</p>
-                    </div>
-                    <div class="slide">
-                        <img src="/api/placeholder/500/300" alt="Бауыржан Момышұлы">
-                        <h3>Бауыржан Момышұлы</h3>
-                        <p>Жазушы, қолбасшы, "Ұшқан ұя" шығармасының авторы</p>
-                    </div>
-                    <div class="slide">
-                        <img src="/api/placeholder/500/300" alt="Олжас Сүлейменов">
-                        <h3>Олжас Сүлейменов</h3>
-                        <p>Ақын, жазушы, қоғам қайраткері</p>
-                    </div>
-                </div>
-                <div class="navigation">
-                    <button id="prev">Алдыңғы</button>
-                    <button id="next">Келесі</button>
-                </div>
-            </div>
-        </section>
+</section
     </div>
     
     <!-- Футер -->
@@ -371,48 +333,6 @@
         <div class="container">
         </div>
     </footer>
-    
-    <script>
-        // Слайдшоу үшін JavaScript коды
-        document.addEventListener('DOMContentLoaded', function() {
-            const slides = document.querySelector('.slides');
-            const slideItems = document.querySelectorAll('.slide');
-            const prevBtn = document.getElementById('prev');
-            const nextBtn = document.getElementById('next');
-            let currentSlide = 0;
-            const slideCount = slideItems.length;
-            
-            // Слайдты көрсету функциясы
-            function showSlide(n) {
-                if (n >= slideCount) {
-                    currentSlide = 0;
-                } else if (n < 0) {
-                    currentSlide = slideCount - 1;
-                } else {
-                    currentSlide = n;
-                }
-                
-                slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-            }
-            
-            // Алдыңғы слайдқа өту
-            prevBtn.addEventListener('click', function() {
-                showSlide(currentSlide - 1);
-            });
-            
-            // Келесі слайдқа өту
-            nextBtn.addEventListener('click', function() {
-                showSlide(currentSlide + 1);
-            });
-            
-            // Автоматты слайдшоу
-            setInterval(function() {
-                showSlide(currentSlide + 1);
-            }, 5000);
-            
-            // Бастапқы слайдты көрсету
-            showSlide(0);
-        });
-    </script>
+
 </body>
 </html>
